@@ -20,9 +20,9 @@ micropython.alloc_emergency_exception_buf(200)
 class Basichrv:
     def __init__(self, pin_num, sample_rate):
         self.pulse_pin = ADC(pin_num)
-        self.sample_amount =  7500  #You can test different values however I think for 30 seconds it must be 7500
+        self.sample_amount =  7500  #You can test different values - however I think for 30 seconds it must be 7500
         self.sample_amount_counter_max = self.sample_amount + 1
-        self.samples = Fifo(self.sample_amount)    #I think for 30 seconds this one has to be 7500 so maybe use a number more than that
+        self.samples = Fifo(self.sample_amount)
         self.sample_rate = sample_rate
         
         self.sample_counter = 0 #we need it to 7500 to run lets_process
