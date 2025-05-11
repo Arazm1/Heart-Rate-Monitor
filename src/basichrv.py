@@ -219,7 +219,7 @@ class Basichrv:
             self.oled.text(f"RMSSD: {int(self.rmssd)}", 0, 20)
             self.oled.text(f"SDNN: {int(self.sdnn)}", 0, 30)
             self.oled.show()
-            time.sleep(7) # To allow user see the results for 10 seconds
+            time.sleep(7) # allow the user to see the results for 7 seconds
 
             
     def calc_meanhr(self):
